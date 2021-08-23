@@ -1,0 +1,187 @@
+@import "./global";
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+nav ul{
+    display: flex;
+}
+
+.nav-list{
+    &:not(:last-child){
+        margin-right: 4em;
+    }
+
+    a{
+        font-size: 1rem;
+        color: $gray;
+        position: relative;
+
+        &:hover{
+            color: $purple;
+            padding-bottom: 10px;
+            border-bottom: 3px solid $purple;
+            transition: 250ms ease-in-out;
+        }
+    }
+}
+
+.theme{
+    display: flex;
+}
+
+.material-icons.t_on,
+.material-icons.t_off
+{
+    font-size: 48px;
+    cursor: pointer;
+    position: relative;
+
+    &::after{
+        content: "Dark-Theme";
+        font-size: 0.9rem;
+        font-family: $desc;
+        position: absolute;
+        left: -50%;
+        top: 80%;
+    }
+}
+
+.hero{
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-desc{
+        h1{
+            font-size: clamp(2rem, 2.7rem, 3rem);
+            font-family: $bigFont;
+        }
+        p{
+            margin-top: -1.5em;
+            margin-bottom: 2.5em;
+        }
+        button{
+            font-size: 0.9rem;
+            padding: .75em 1em;
+            border: 2px solid $purple;
+            border-radius: 10px;
+            margin-right: 7px;
+            cursor: pointer;
+
+            a{
+                color: white;
+            }
+
+            &:hover{
+                background: $purpleL;
+                border: 2px solid $purpleL;
+                transition: 250ms ease-in-out;
+
+                a{
+                    color: white;
+                }
+            }
+        }
+        .b1{
+            background: $purple;
+        }
+        .b2{
+            a{
+                color: $purple;
+            }
+        }
+    }
+}
+
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    .projects{
+        display: flex;
+    }
+    .proj,
+        .proj-desc{
+            height: 250px;
+            margin-bottom: 30px;
+        }
+
+        .proj{
+            background-color: white;           
+            width: 35%;
+    
+            &-desc{
+                background-color: gray;
+                height: 250px;
+                width: 65%;
+            }
+        }
+}
+
+.contact-container{
+    margin-top: 2em;
+    background: $purpleL;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 48px 0;
+    box-shadow: 16px -16px 1px 1px $purpleS;
+    border-radius: 8px;
+
+    form{
+        display: flex;
+        flex-direction: column;
+
+        input, textarea, button{
+            border: 0;
+            padding: 0.7em 0.4em;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-family: $desc;
+        }
+
+        input, textarea{
+            background: rgb(212, 206, 206);
+            margin-bottom: 8px;
+        }
+        
+        button{
+            padding: 0.7em 0.4em;
+            background: $green;
+            color: white;
+            cursor: pointer;
+
+            &:hover{
+                background: $greenL;
+                transition: 300ms ease-in-out;
+            }
+        }
+
+    }
+
+    .social-icons{
+        margin-top: 2.5em;
+        display: flex;
+        justify-content: space-between;
+
+        img{
+            height: 50px;
+        }
+    }
+}
+
+footer{
+    margin-top: 25px;
+    background-color: $purpleD;
+    text-align: center;
+    padding: .375em 0;
+    color: white;
+}

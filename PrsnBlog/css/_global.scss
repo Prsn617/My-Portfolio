@@ -1,0 +1,45 @@
+@import "./variables";
+
+@mixin flexCenter($dir) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $dir;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: $heading;
+    background-color: $back;
+}
+
+header,
+main{
+    padding: 0 5vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.material-icons.hidden{
+    display: none;
+}
+
+.dark{
+    background: $backD;
+    filter: invert(1) hue-rotate(220deg);
+}
