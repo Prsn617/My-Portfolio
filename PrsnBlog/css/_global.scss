@@ -13,6 +13,7 @@
 
 html{
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -22,9 +23,10 @@ body{
     background-color: $back;
 }
 
-header,
-main{
-    padding: 0 5vw;
+header, .about-container,
+.hero, .project-container,
+.nav-title, .contacts{
+    padding-inline: 12vw 9.5vw;
 }
 
 a{
@@ -41,5 +43,62 @@ li{
 
 .dark{
     background: $backD;
-    filter: invert(1) hue-rotate(220deg);
+    color: $nText;
+
+    nav a{
+        color: $nText;
+
+        &:hover{
+            color: $purpleS;
+            border-bottom: 3px solid $purpleS;
+        }
+    }
+
+    main h1 span{
+        color: $purpleS;
+    }
+
+    main .b2{
+        background: $nText;
+    }
+
+    main span i{
+        color: $purpleS;
+    }
+    
+    main .project-1, 
+    main .project-3{
+        background: linear-gradient(90deg, $backD 0%, $purple 100%);
+    }
+
+    main .project-2{
+        background: linear-gradient(90deg, $purple 0%, $backD 100%);
+    }
+
+    .proj-desc{
+        color: $nText;
+
+        button{
+            background: $purpleS;
+            color: black;
+
+            &:hover{
+                background-color: wheat;
+                // transition: 300ms ease-in-out;
+            }
+        }
+    }
+
+    .curves .shape-fill {
+        fill: $backD;
+    }
+
+    main .contact-container,
+    main .contacts{
+        background: $purple;
+    }
+
+    
 }
+
+

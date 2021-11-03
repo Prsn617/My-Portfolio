@@ -7,6 +7,10 @@ header{
     height: 10vh;
 }
 
+// main{
+//     position: relative;
+// }
+
 nav ul{
     display: flex;
 }
@@ -61,10 +65,14 @@ nav ul{
         h1{
             font-size: clamp(2rem, 2.7rem, 3rem);
             font-family: $bigFont;
+
+            span{
+                color: $purple;
+            }
         }
         p{
             margin-top: -1.5em;
-            margin-bottom: 2.5em;
+            margin-bottom: 1.5em;
         }
         button{
             font-size: 0.9rem;
@@ -73,6 +81,7 @@ nav ul{
             border-radius: 10px;
             margin-right: 7px;
             cursor: pointer;
+            transition: 300ms ease-in-out;
 
             a{
                 color: white;
@@ -81,7 +90,7 @@ nav ul{
             &:hover{
                 background: $purpleL;
                 border: 2px solid $purpleL;
-                transition: 250ms ease-in-out;
+                transition: 300ms ease-in-out;
 
                 a{
                     color: white;
@@ -97,44 +106,145 @@ nav ul{
             }
         }
     }
+
+    span{
+        //background-color: $purpleS;
+        border-radius: 10px;
+        padding: 16px 3px 5px 3px;
+        i{
+            color: $backD;
+            margin: 0 10px .5em 5px;
+    
+            &:hover{
+                color: $purple;
+                transition: 300ms ease-in-out;
+            }
+        }
+    }
+
+    &-img{
+        margin-left: 4em;
+        margin-top: 5em;
+        width: 750px;
+
+        img{
+            width: 100%;
+        }
+    }
 }
 
 
 .project-container{
     display: flex;
     flex-direction: column;
-    height: auto;
+    margin-top: 6em;
 
-    .projects{
-        display: flex;
+    img{
+        height: 100%;
     }
-    .proj,
-        .proj-desc{
-            height: 250px;
-            margin-bottom: 30px;
-        }
+
+    .project-1, .project-2, .project-3{
+        position: relative;
+        background: linear-gradient(90deg, $back 0%, $purpleS 100%);
+        height: 250px;
+        margin-bottom: 6em;
+        border-radius: 62px;
 
         .proj{
-            background-color: white;           
-            width: 35%;
-    
-            &-desc{
-                background-color: gray;
-                height: 250px;
-                width: 65%;
-            }
+            position: absolute;
+            top: -50px;
+            height: 380px;
+            padding: 0;
+            transition: 250ms ease-in-out;
+
+        &:hover{
+            height: 420px;
+            top: -60px;
+            transition: 300ms ease-in-out;
         }
+        }
+        .proj-desc{
+            margin-top: 40px;
+            margin-left: 40%;
+        }
+    }
+
+    .project-1{
+        left: -60px;
+    }
+
+    .project-2{
+        background: linear-gradient(90deg, $purpleS 0%, $back 100%);
+        .proj{
+            right: -20px;
+        }
+        .proj-desc{
+            margin-left: 15%;
+            margin-right: 40%;
+        }
+    }
+
+    .project-3{
+        margin-bottom: 3.5em;
+    }
+
+    button{
+        background: $purple;
+        color: white;
+        padding: .5em 1em;
+        border: 1px solid $purple;
+        border-radius: 16px;
+        font-size: 1rem;
+        margin-right: 10px;
+
+        &:hover{
+            background: $purpleL;
+            border: 1px solid $purpleL;
+            transition: 300ms ease-in-out;
+        }
+    }
 }
 
 .contact-container{
-    margin-top: 2em;
+    background: $purpleL;
+    position: relative;
+    padding-top: 5px;
+}
+
+.curves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+
+    h1{
+        font-size: 2rem;
+        color: white;
+        margin-top: -16px;
+    }
+    
+}
+
+.curves svg{
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 99px;
+}
+
+.curves .shape-fill {
+    fill: $back;
+}
+
+.contacts{
+    margin-top: 7.5em;
     background: $purpleL;
     color: white;
     display: flex;
-    justify-content: space-evenly;
-    padding: 48px 0;
-    box-shadow: 16px -16px 1px 1px $purpleS;
-    border-radius: 8px;
+    justify-content: space-between;
+    padding-block: 48px;
 
     form{
         display: flex;
@@ -146,6 +256,8 @@ nav ul{
             border-radius: 5px;
             font-size: 0.9rem;
             font-family: $desc;
+            width: clamp(150px, 400px, 500px);
+
         }
 
         input, textarea{
@@ -155,7 +267,7 @@ nav ul{
         
         button{
             padding: 0.7em 0.4em;
-            background: $green;
+            background: $green2;
             color: white;
             cursor: pointer;
 
@@ -167,20 +279,22 @@ nav ul{
 
     }
 
-    .social-icons{
-        margin-top: 2.5em;
+    .contact-links{
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+    }
 
-        img{
-            height: 50px;
-        }
+    span{
+        margin-top: 10px;
+        border: 1px solid white;
+        padding: 1.5em 1em;
+        margin-bottom: 15px;
     }
 }
 
 footer{
-    margin-top: 25px;
-    background-color: $purpleD;
+    // margin-top: 25px;
+    background-color: rgb(48, 44, 44);
     text-align: center;
     padding: .375em 0;
     color: white;
