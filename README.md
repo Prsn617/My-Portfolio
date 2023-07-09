@@ -2,4 +2,4 @@
 
 <p align="center"><img src="https://github.com/Prsn617/Portfolio/blob/main/PrsnBlog/images/prsn.png" width="500"></p>
 
-<p align="center">Made using HTML, CSS(SASS) and JS. It contains every required details about me. For more info, checkout https://prashantsh.com.np</p>
+<p align="center">Made using HTML, CSS(SASS) and JS. My personal portfolio containing some of my projects I've created.</p>
