@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prsn - Personal Portfolio</title>
+    <!-- <link rel="icon" href="icon_path" type="image/icon type"> -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body id="body" class="">
+    <header class="head" id="head">
+      <div class="logo">
+        <a href="/"><h1>Prsn</h1></a>
+      </div>
+      <nav>
+        <ul class="" id="ul">
+          <li class="nav-list"><a href="index.html">Home</a></li>
+          <!-- <li class="nav-list"><a href="#">About</a></li> -->
+          <li class="nav-list"><a href="#prj">Projects</a></li>
+          <li class="nav-list"><a href="#ctc">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="theme" id="theme">
+        <span class="material-icons t_on hidden" id="t1">toggle_on</span>
+        <span class="material-icons t_off" id="t2">toggle_off</span>
+      </div>
+      <div class="burger hidden" onclick="toggleNav()">
+        <span class="material-icons burg"> menu </span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-desc">
+          <h1>Creating your ideas into <span>meaningful</span> outcome.</h1>
+          <p>
+            Hi, I am Prashant Shiwakoti. I am a Web Designer and Developer that
+            builds Beautiful stuffs online.
+          </p>
+
+          <button class="b1 btn-purp">
+            <a href="#prj">See my Projects</a>
+          </button>
+          <button class="b2 btn-white"><a href="#ctc">Contact Me</a></button
+          ><br />
+        </div>
+        <div class="hero-img">
+          <img src="./images/prsnblog.svg" alt="" />
+        </div>
+      </section>
+
+      <h1 class="nav-title" id="prj">Featured Projects</h1>
+
+      <section class="project-container">
+        <div class="project-1" data-aos="slide-right">
+          <div class="proj">
+            <img src="./images/ktp-project.png" alt="Project 1" />
+          </div>
+          <div class="proj-desc">
+            <h1>Kantipur Chocolate Mart (E-Commerce Website)</h1>
+            <p>
+              A complete e-commerce website with all the features available.<br />
+              Made using: HTML, CSS, JS, PHP, MySQL <br />
+            </p>
+            <!-- <a
+              href="http://kantipur.epizy.com/index.php"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><button class="btn-purp">Visit Site</button></a
+            > -->
+            <a
+              href="https://github.com/Prsn617/Kantipur"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><button class="btn-purp">View Code</button></a
+            >
+          </div>
+        </div>
+
+        <div class="project-2" data-aos="slide-left">
+          <div class="proj-desc">
+            <h1>Frensta Social Media App</h1>
+            <p>
+              A social media app where you can post stuff and like & comment on
+              them<br />
+              Made using: React JS, Firebase, SASS<br />
+            </p>
+
+            <a
+              href="https://github.com/Prsn617/Frensta-Social-Media-App"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><button class="btn-purp">View Code</button></a
+            >
+          </div>
+          <div class="proj">
+            <img src="./images/frensta2.png" alt="Project 2" />
+          </div>
+        </div>
+
+        <div class="project-3" data-aos="slide-right">
+          <div class="proj">
+            <img src="./images/lac-project2.png" alt="Project 3" />
+          </div>
+          <div class="proj-desc">
+            <h1>Look n Cook (Food Recipe App)</h1>
+            <p>
+              A food recipe app that provides you the recipe of any food
+              available.<br />
+              Made using: HTML, CSS, JS, SASS <br />
+            </p>
+            <a
+              href="http://lookncook.epizy.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><button class="btn-purp">Visit Site</button></a
+            >
+            <a
+              href="https://github.com/Prsn617/LooknCook"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><button class="btn-purp">View Code</button></a
+            >
+          </div>
+        </div>
+
+        <a class="more btn-white" href="projects.html"> More Projects ></a>
+      </section>
+
+      <!-- <h1 class="nav-title">About Me</h1>
+
+        <section class="about-container">
+            <div class="about">
+                <p> Hi, I am Prashant Shiwakoti. I am a full stack developer that can help you achieve your vision.</p><br>
+                <p></p>
+            </div>
+            <div class="about-img"></div>
+        </section> -->
+
+      <section class="contact-container">
+        <div class="curves">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+          <h1 align="center">Contact Me</h1>
+        </div>
+        <div class="contacts" id="ctc">
+          <div class="form">
+            <form
+              action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeF1yJYA2eqhdMZmwRZscpOxlfURt98_MlI8KZ-GjSSTlE8nw/formResponse"
+              method="POST"
+              target="hidden_iframe"
+              onsubmit="submitted=true"
+            >
+              <input
+                type="text"
+                name="entry.1734910863"
+                required
+                placeholder=" Your Name"
+              />
+              <input
+                type="email"
+                name="entry.1573407047"
+                required
+                placeholder="Your E-mail"
+              />
+              <textarea
+                name="entry.196212547"
+                id=""
+                cols="30"
+                rows="5"
+                required
+                placeholder="Message..."
+              ></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+          <div class="contact-links">
+            <span
+              ><a
+                href="https://github.com/Prsn617"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa fa-github fa-2x"> </i
+              ></a>
+              GitHub (Prsn617)
+            </span>
+            <span><i class="fa fa-envelope fa-2x"> </i> prsn617@gmail.com</span>
+            <span
+              ><i class="fa fa-map-marker fa-2x"> </i> Kathmandu, Nepal</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section></section>
+    </main>
+
+    <footer>
+      <p>Copyright © Prashant Shiwakoti</p>
+      <p>All Rights Reserved</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 100,
+        duration: 900,
+      });
+    </script>
+    <script type="text/javascript">
+      var submitted = false;
+    </script>
+    <iframe
+      name="hidden_iframe"
+      id="hidden_iframe"
+      style="display: none"
+      onload="if(submitted){window.location='index.html';}"
+    ></iframe>
+  </body>
+</html>

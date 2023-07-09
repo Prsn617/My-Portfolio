@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+/*Colors*/
+/*Fonts*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0deg, 0%, 99%);
+  overflow-x: hidden;
+}
+
+.logo a {
+  color: #000;
+}
+
+header,
+.about-container,
+.hero,
+.project-container,
+.nav-title,
+.contacts,
+.more-projects {
+  padding-inline: 12vw 9.5vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.material-icons.hidden {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-purp,
+.btn-white {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 12px;
+  border: 1px solid hsl(256deg, 75%, 32%);
+  cursor: pointer;
+  transition: all 350ms ease-in-out;
+}
+.btn-purp:hover,
+.btn-white:hover {
+  transition: all 500ms ease-in-out;
+}
+
+.btn-purp {
+  background-color: hsl(256deg, 75%, 32%);
+  color: hsl(0deg, 0%, 99%);
+}
+.btn-purp:hover {
+  background-color: hsl(0deg, 0%, 99%);
+  color: hsl(256deg, 75%, 32%);
+}
+
+.btn-white {
+  background-color: hsl(0deg, 0%, 99%);
+  color: hsl(256deg, 75%, 32%);
+}
+.btn-white:hover {
+  background-color: hsl(256deg, 75%, 32%);
+  color: hsl(0deg, 0%, 99%);
+}
+
+.dark {
+  background: hsl(240deg, 3%, 12%);
+  color: hsl(138deg, 10%, 80%);
+}
+.dark nav a {
+  color: hsl(138deg, 10%, 80%);
+}
+.dark nav a:hover {
+  color: hsl(256deg, 55%, 75%);
+  border-bottom: 3px solid hsl(256deg, 55%, 75%);
+}
+.dark .logo a {
+  color: hsl(138deg, 10%, 80%);
+}
+.dark main h1 span {
+  color: hsl(256deg, 55%, 75%);
+}
+.dark main .b2 {
+  background: hsl(138deg, 10%, 80%);
+}
+.dark main span i {
+  color: hsl(256deg, 55%, 75%);
+}
+.dark main .project-1,
+.dark main .project-3 {
+  background: linear-gradient(90deg, hsl(240deg, 3%, 12%) 0%, hsl(256deg, 75%, 32%) 100%);
+}
+.dark main .project-2 {
+  background: linear-gradient(90deg, hsl(256deg, 75%, 32%) 0%, hsl(240deg, 3%, 12%) 100%);
+}
+.dark .proj-desc {
+  color: hsl(138deg, 10%, 80%);
+}
+.dark .proj-desc button {
+  background: hsl(256deg, 55%, 75%);
+  color: black;
+}
+.dark .proj-desc button:hover {
+  background-color: wheat;
+}
+.dark .curves .shape-fill {
+  fill: hsl(240deg, 3%, 12%);
+}
+.dark main .contact-container,
+.dark main .contacts {
+  background: hsl(256deg, 75%, 32%);
+}
+.dark .projects-demo {
+  background-color: hsl(240deg, 3%, 12%);
+  box-shadow: 4px 4px 5px 5px hsl(256deg, 75%, 32%);
+}
+.dark .about-project .title span {
+  background-color: #555;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+nav ul {
+  display: flex;
+}
+
+.nav-list:not(:last-child) {
+  margin-right: 4em;
+}
+.nav-list a {
+  font-size: 1rem;
+  color: hsl(0deg, 5%, 35%);
+  position: relative;
+}
+.nav-list a:hover {
+  color: hsl(256deg, 75%, 32%);
+  padding-bottom: 10px;
+  border-bottom: 3px solid hsl(256deg, 75%, 32%);
+  transition: 250ms ease-in-out;
+}
+
+.theme {
+  display: flex;
+}
+
+.material-icons.t_on,
+.material-icons.t_off {
+  font-size: 48px;
+  cursor: pointer;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.material-icons.t_on::after,
+.material-icons.t_off::after {
+  content: "Dark-Theme";
+  font-size: 0.9rem;
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  left: -50%;
+  top: 80%;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-desc h1 {
+  font-size: 2.7rem;
+  font-family: "Russo One", sans-serif;
+}
+.hero-desc h1 span {
+  color: hsl(256deg, 75%, 32%);
+}
+.hero-desc p {
+  margin-top: -1.5em;
+  margin-bottom: 1.5em;
+}
+.hero-desc button {
+  margin-bottom: 8px;
+  margin-right: 7px;
+}
+.hero-desc button a {
+  color: white;
+}
+.hero-desc button:hover {
+  background: hsl(256deg, 69%, 45%);
+  transition: all 600ms ease-in-out;
+}
+.hero-desc button:hover a {
+  color: white;
+  transition: all 600ms ease-in-out;
+}
+.hero-desc .b1 {
+  background: hsl(256deg, 75%, 32%);
+}
+.hero-desc .b2 a {
+  color: hsl(256deg, 75%, 32%);
+}
+.hero-img {
+  margin-left: 4em;
+  margin-top: 5em;
+  width: 750px;
+}
+.hero-img img {
+  width: 100%;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6em;
+}
+.project-container img {
+  height: 100%;
+}
+.project-container .project-1,
+.project-container .project-2,
+.project-container .project-3 {
+  position: relative;
+  background: linear-gradient(90deg, hsl(0deg, 0%, 99%) 0%, hsl(256deg, 55%, 75%) 100%);
+  height: 250px;
+  margin-bottom: 6em;
+  border-radius: 62px;
+}
+.project-container .project-1 .proj,
+.project-container .project-2 .proj,
+.project-container .project-3 .proj {
+  position: absolute;
+  top: -50px;
+  height: 380px;
+  padding: 0;
+  transition: 250ms ease-in-out;
+}
+.project-container .project-1 .proj:hover,
+.project-container .project-2 .proj:hover,
+.project-container .project-3 .proj:hover {
+  height: 420px;
+  top: -60px;
+  transition: 300ms ease-in-out;
+}
+.project-container .project-1 .proj-desc,
+.project-container .project-2 .proj-desc,
+.project-container .project-3 .proj-desc {
+  margin-top: 40px;
+  margin-left: 40%;
+}
+.project-container .project-1,
+.project-container .project-3 {
+  left: -60px;
+}
+.project-container .project-2 {
+  background: linear-gradient(90deg, hsl(256deg, 55%, 75%) 0%, hsl(0deg, 0%, 99%) 100%);
+}
+.project-container .project-2 .proj {
+  height: 290px;
+  top: -20px;
+  right: -20px;
+}
+.project-container .project-2 .proj:hover {
+  height: 315px;
+  top: -30px;
+}
+.project-container .project-2 .proj-desc {
+  margin-left: 5%;
+  margin-right: 40%;
+}
+.project-container .project-3 {
+  margin-bottom: 5.25em;
+}
+.project-container .project-3 .proj {
+  height: 320px;
+}
+.project-container .project-3 .proj:hover {
+  height: 355px;
+}
+.project-container button {
+  font-size: 1rem;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+.project-container button:hover {
+  background: hsl(256deg, 69%, 45%);
+  color: hsl(0deg, 0%, 99%);
+}
+.project-container .more {
+  border: 2px solid hsl(256deg, 75%, 32%);
+  font-weight: bold;
+  border-radius: 0;
+  align-self: center;
+  margin-block: 10px 50px;
+}
+
+.contact-container {
+  background: hsl(256deg, 69%, 45%);
+  position: relative;
+  padding-top: 5px;
+}
+
+.curves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.curves h1 {
+  font-size: 2rem;
+  color: white;
+  margin-top: -16px;
+}
+
+.curves svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 99px;
+}
+
+.curves .shape-fill {
+  fill: hsl(0deg, 0%, 99%);
+}
+
+.contacts {
+  margin-top: 7.5em;
+  background: hsl(256deg, 69%, 45%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-block: 48px;
+}
+.contacts form {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 25px;
+}
+.contacts form textarea,
+.contacts form button {
+  grid-column: 1/3;
+}
+.contacts form input,
+.contacts form textarea,
+.contacts form button {
+  border: 0;
+  padding: 0.7em 0.4em;
+  padding-left: 20px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  background-color: rgb(212, 206, 206);
+}
+.contacts form button {
+  padding: 0.7em 0.4em;
+  background-color: hsl(130deg, 90%, 29%);
+  color: white;
+  cursor: pointer;
+  width: 200px;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-inline: auto;
+}
+.contacts form button:hover {
+  background: hsl(125deg, 85%, 36%);
+  transition: 300ms ease-in-out;
+}
+.contacts .contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contacts .contact-links i {
+  color: white;
+}
+.contacts .contact-links i:hover {
+  color: hsl(240deg, 3%, 12%);
+  transition: 300ms ease-in-out;
+}
+.contacts .contact-links span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  padding: 1.5em 1em;
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: rgb(48, 44, 44);
+  text-align: center;
+  padding: 0.375em 0;
+  color: white;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+/*Colors*/
+/*Fonts*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0deg, 0%, 99%);
+  overflow-x: hidden;
+}
+
+.logo a {
+  color: #000;
+}
+
+header,
+.about-container,
+.hero,
+.project-container,
+.nav-title,
+.contacts,
+.more-projects {
+  padding-inline: 12vw 9.5vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.material-icons.hidden {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-purp,
+.btn-white {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 12px;
+  border: 1px solid hsl(256deg, 75%, 32%);
+  cursor: pointer;
+  transition: all 350ms ease-in-out;
+}
+.btn-purp:hover,
+.btn-white:hover {
+  transition: all 500ms ease-in-out;
+}
+
+.btn-purp {
+  background-color: hsl(256deg, 75%, 32%);
+  color: hsl(0deg, 0%, 99%);
+}
+.btn-purp:hover {
+  background-color: hsl(0deg, 0%, 99%);
+  color: hsl(256deg, 75%, 32%);
+}
+
+.btn-white {
+  background-color: hsl(0deg, 0%, 99%);
+  color: hsl(256deg, 75%, 32%);
+}
+.btn-white:hover {
+  background-color: hsl(256deg, 75%, 32%);
+  color: hsl(0deg, 0%, 99%);
+}
+
+.dark {
+  background: hsl(240deg, 3%, 12%);
+  color: hsl(138deg, 10%, 80%);
+}
+.dark nav a {
+  color: hsl(138deg, 10%, 80%);
+}
+.dark nav a:hover {
+  color: hsl(256deg, 55%, 75%);
+  border-bottom: 3px solid hsl(256deg, 55%, 75%);
+}
+.dark .logo a {
+  color: hsl(138deg, 10%, 80%);
+}
+.dark main h1 span {
+  color: hsl(256deg, 55%, 75%);
+}
+.dark main .b2 {
+  background: hsl(138deg, 10%, 80%);
+}
+.dark main span i {
+  color: hsl(256deg, 55%, 75%);
+}
+.dark main .project-1,
+.dark main .project-3 {
+  background: linear-gradient(90deg, hsl(240deg, 3%, 12%) 0%, hsl(256deg, 75%, 32%) 100%);
+}
+.dark main .project-2 {
+  background: linear-gradient(90deg, hsl(256deg, 75%, 32%) 0%, hsl(240deg, 3%, 12%) 100%);
+}
+.dark .proj-desc {
+  color: hsl(138deg, 10%, 80%);
+}
+.dark .proj-desc button {
+  background: hsl(256deg, 55%, 75%);
+  color: black;
+}
+.dark .proj-desc button:hover {
+  background-color: wheat;
+}
+.dark .curves .shape-fill {
+  fill: hsl(240deg, 3%, 12%);
+}
+.dark main .contact-container,
+.dark main .contacts {
+  background: hsl(256deg, 75%, 32%);
+}
+.dark .projects-demo {
+  background-color: hsl(240deg, 3%, 12%);
+  box-shadow: 4px 4px 5px 5px hsl(256deg, 75%, 32%);
+}
+.dark .about-project .title span {
+  background-color: #555;
+}
+
+.more-projects {
+  margin-top: 24px;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-block: 48px;
+  gap: 40px;
+}
+
+.projects-demo {
+  height: auto;
+  width: 47%;
+  box-shadow: 4px 4px 5px 5px hsl(256deg, 55%, 75%);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.projects-demo .about-project {
+  padding: 16px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.projects-demo label {
+  margin-top: 16px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.projects-demo img {
+  width: 100%;
+}
+
+.title label {
+  margin-right: 7px;
+}
+
+.title span {
+  background-color: lightgray;
+  padding: 3px 5px;
+  font-size: 0.7rem;
+  border-radius: 5px;
+}/*# sourceMappingURL=projects.css.map */

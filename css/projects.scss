@@ -1,0 +1,47 @@
+@import "./global";
+
+.more-projects {
+  margin-top: 24px;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-block: 48px;
+  gap: 40px;
+}
+
+.projects-demo {
+  height: auto;
+  width: 47%;
+  box-shadow: 4px 4px 5px 5px $purpleS;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  .about-project {
+    padding: 16px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.title label {
+  margin-right: 7px;
+}
+
+.title span {
+  background-color: lightgray;
+  padding: 3px 5px;
+  font-size: 0.7rem;
+  border-radius: 5px;
+}
