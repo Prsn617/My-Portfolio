@@ -433,6 +433,7 @@ header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 12px;
 }
 .contacts .contact-links i {
   color: white;

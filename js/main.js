@@ -5,9 +5,6 @@ const burger = document.querySelector(".burger");
 const navbar = document.querySelector(".nav-bar");
 const navLists = document.querySelectorAll(".nav-list");
 let light = localStorage.getItem("theme");
-// const head = document.querySelector("#head");
-// const ul = document.querySelector("#ul");
-// const theme = document.querySelector("#theme");
 
 body.classList = light;
 if (light === "dark") {
@@ -36,12 +33,6 @@ navLists.forEach((lists) => {
     toggleNavBar();
   });
 });
-
-// function toggleNav() {
-//   head.classList.toggle("resp-head");
-//   ul.classList.toggle("resp-ul");
-//   theme.classList.toggle("resp-theme");
-// }
 
 burger.addEventListener("click", () => {
   toggleNavBar();
