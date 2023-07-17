@@ -1,3 +1,5 @@
+@import "./global";
+
 @media only screen and (max-width: 1120px) {
   nav ul,
   .theme {
@@ -8,36 +10,61 @@
     transition: all 0.3s ease-in-out;
   }
 
-  .resp-head {
-    flex-direction: column;
-    height: 300px;
-  }
-
   .burger {
     display: flex;
-    .burg {
-      font-size: 36px;
-    }
   }
 
-  .resp-ul {
-    display: flex;
+  main {
+    position: sticky;
+    top: 80px;
+  }
+
+  .nav-bar {
     flex-direction: column;
-    align-items: center;
-    padding: 0;
-  }
-  .nav-list {
-    &:not(:last-child) {
-      margin-right: 0;
-      margin-bottom: 28px;
+    justify-content: center;
+    align-items: start;
+    position: fixed;
+    width: 250px;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background-color: $purple;
+    height: 100vh;
+    transform: translateX(250px);
+    transition: all 350ms ease-in-out;
+
+    ul {
+      align-items: start;
+      flex-direction: column;
+      margin-left: 40px;
+    }
+
+    li a {
+      color: white;
     }
   }
 
-  .resp-theme {
+  .nav-bar.active {
+    transform: translateX(0px);
+    transition: all 600ms ease-in-out;
+  }
+
+  .theme {
     display: flex;
     margin-bottom: 30px;
-    align-items: center;
+    margin-left: 78px;
+    align-items: start;
     justify-content: center;
+  }
+
+  .material-icons.t_on,
+  .material-icons.t_off {
+    color: white;
+
+    &::after {
+      left: 0;
+      top: 88%;
+    }
   }
 
   .hero {
@@ -91,6 +118,13 @@
       height: 232px;
     }
   }
+
+  .contacts {
+    .contact-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
 
 @media only screen and (max-width: 675px) {
@@ -108,6 +142,7 @@
     }
 
     .contact-links {
+      display: flex;
       flex-direction: column;
 
       span {

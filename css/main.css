@@ -16,7 +16,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-color: hsl(0deg, 0%, 99%);
+  background-color: hsl(0, 0%, 99%);
   overflow-x: hidden;
 }
 
@@ -55,7 +55,7 @@ li {
   font-size: 1rem;
   padding: 0.5em 1em;
   border-radius: 12px;
-  border: 1px solid hsl(256deg, 75%, 32%);
+  border: 1px solid hsl(256, 75%, 32%);
   cursor: pointer;
   transition: all 350ms ease-in-out;
 }
@@ -65,101 +65,138 @@ li {
 }
 
 .btn-purp {
-  background-color: hsl(256deg, 75%, 32%);
-  color: hsl(0deg, 0%, 99%);
+  background-color: hsl(256, 75%, 32%);
+  color: hsl(0, 0%, 99%);
 }
 .btn-purp:hover {
-  background-color: hsl(0deg, 0%, 99%);
-  color: hsl(256deg, 75%, 32%);
+  background-color: hsl(0, 0%, 99%);
+  color: hsl(256, 75%, 32%);
 }
 
 .btn-white {
-  background-color: hsl(0deg, 0%, 99%);
-  color: hsl(256deg, 75%, 32%);
+  background-color: hsl(0, 0%, 99%);
+  color: hsl(256, 75%, 32%);
 }
 .btn-white:hover {
-  background-color: hsl(256deg, 75%, 32%);
-  color: hsl(0deg, 0%, 99%);
+  background-color: hsl(256, 75%, 32%);
+  color: hsl(0, 0%, 99%);
 }
 
 .dark {
-  background: hsl(240deg, 3%, 12%);
-  color: hsl(138deg, 10%, 80%);
+  background: hsl(240, 3%, 12%);
+  color: hsl(138, 10%, 80%);
 }
 .dark nav a {
-  color: hsl(138deg, 10%, 80%);
+  color: hsl(138, 10%, 80%);
 }
 .dark nav a:hover {
-  color: hsl(256deg, 55%, 75%);
-  border-bottom: 3px solid hsl(256deg, 55%, 75%);
+  color: hsl(256, 55%, 75%);
+  border-bottom: 3px solid hsl(256, 55%, 75%);
 }
 .dark .logo a {
-  color: hsl(138deg, 10%, 80%);
+  color: hsl(138, 10%, 80%);
 }
 .dark main h1 span {
-  color: hsl(256deg, 55%, 75%);
+  color: hsl(256, 55%, 75%);
 }
 .dark main .b2 {
-  background: hsl(138deg, 10%, 80%);
+  background: hsl(138, 10%, 80%);
 }
 .dark main span i {
-  color: hsl(256deg, 55%, 75%);
+  color: hsl(256, 55%, 75%);
 }
 .dark main .project-1,
 .dark main .project-3 {
-  background: linear-gradient(90deg, hsl(240deg, 3%, 12%) 0%, hsl(256deg, 75%, 32%) 100%);
+  background: linear-gradient(90deg, hsl(240, 3%, 12%) 0%, hsl(256, 75%, 32%) 100%);
 }
 .dark main .project-2 {
-  background: linear-gradient(90deg, hsl(256deg, 75%, 32%) 0%, hsl(240deg, 3%, 12%) 100%);
+  background: linear-gradient(90deg, hsl(256, 75%, 32%) 0%, hsl(240, 3%, 12%) 100%);
 }
 .dark .proj-desc {
-  color: hsl(138deg, 10%, 80%);
+  color: hsl(138, 10%, 80%);
 }
 .dark .proj-desc button {
-  background: hsl(256deg, 55%, 75%);
+  background: hsl(256, 55%, 75%);
   color: black;
 }
 .dark .proj-desc button:hover {
   background-color: wheat;
 }
 .dark .curves .shape-fill {
-  fill: hsl(240deg, 3%, 12%);
+  fill: hsl(240, 3%, 12%);
 }
 .dark main .contact-container,
 .dark main .contacts {
-  background: hsl(256deg, 75%, 32%);
+  background: hsl(256, 75%, 32%);
 }
 .dark .projects-demo {
-  background-color: hsl(240deg, 3%, 12%);
-  box-shadow: 4px 4px 5px 5px hsl(256deg, 75%, 32%);
+  background-color: hsl(240, 3%, 12%);
+  box-shadow: 4px 4px 5px 5px hsl(256, 75%, 32%);
 }
 .dark .about-project .title span {
   background-color: #555;
 }
 
-.head {
+header {
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+}
+header .logo {
+  flex: 2;
 }
 
-nav ul {
+.burger {
+  flex-direction: column;
+  gap: 7px;
+  display: none;
+  z-index: 3;
+  cursor: pointer;
+}
+.burger div {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  transition: all 500ms ease-in-out;
+}
+
+.burger.active .b1 {
+  transform: translateY(12px) rotate(45deg);
+  transition: all 600ms ease-in-out;
+  background-color: rgb(221, 109, 109);
+}
+.burger.active .b2 {
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.burger.active .b3 {
+  transform: translateY(-12px) rotate(-45deg);
+  transition: all 600ms ease-in-out;
+  background-color: rgb(221, 109, 109);
+}
+
+.nav-bar {
+  flex: 3;
   display: flex;
+  gap: 20px;
+  justify-content: space-between;
 }
-
-.nav-list:not(:last-child) {
-  margin-right: 4em;
+.nav-bar ul {
+  display: flex;
+  gap: 50px;
+  align-items: center;
 }
-.nav-list a {
+.nav-bar li a {
   font-size: 1rem;
-  color: hsl(0deg, 5%, 35%);
+  color: hsl(0, 5%, 35%);
   position: relative;
+  transition: all 350ms ease-in-out;
 }
-.nav-list a:hover {
-  color: hsl(256deg, 75%, 32%);
+.nav-bar li a:hover {
+  color: hsl(256, 75%, 32%);
   padding-bottom: 10px;
-  border-bottom: 3px solid hsl(256deg, 75%, 32%);
+  border-bottom: 3px solid hsl(256, 75%, 32%);
   transition: 250ms ease-in-out;
 }
 
@@ -174,7 +211,6 @@ nav ul {
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .material-icons.t_on::after,
@@ -198,7 +234,7 @@ nav ul {
   font-family: "Russo One", sans-serif;
 }
 .hero-desc h1 span {
-  color: hsl(256deg, 75%, 32%);
+  color: hsl(256, 75%, 32%);
 }
 .hero-desc p {
   margin-top: -1.5em;
@@ -212,7 +248,7 @@ nav ul {
   color: white;
 }
 .hero-desc button:hover {
-  background: hsl(256deg, 69%, 45%);
+  background: hsl(256, 69%, 45%);
   transition: all 600ms ease-in-out;
 }
 .hero-desc button:hover a {
@@ -220,10 +256,10 @@ nav ul {
   transition: all 600ms ease-in-out;
 }
 .hero-desc .b1 {
-  background: hsl(256deg, 75%, 32%);
+  background: hsl(256, 75%, 32%);
 }
 .hero-desc .b2 a {
-  color: hsl(256deg, 75%, 32%);
+  color: hsl(256, 75%, 32%);
 }
 .hero-img {
   margin-left: 4em;
@@ -246,7 +282,7 @@ nav ul {
 .project-container .project-2,
 .project-container .project-3 {
   position: relative;
-  background: linear-gradient(90deg, hsl(0deg, 0%, 99%) 0%, hsl(256deg, 55%, 75%) 100%);
+  background: linear-gradient(90deg, hsl(0, 0%, 99%) 0%, hsl(256, 55%, 75%) 100%);
   height: 250px;
   margin-bottom: 6em;
   border-radius: 62px;
@@ -278,7 +314,7 @@ nav ul {
   left: -60px;
 }
 .project-container .project-2 {
-  background: linear-gradient(90deg, hsl(256deg, 55%, 75%) 0%, hsl(0deg, 0%, 99%) 100%);
+  background: linear-gradient(90deg, hsl(256, 55%, 75%) 0%, hsl(0, 0%, 99%) 100%);
 }
 .project-container .project-2 .proj {
   height: 290px;
@@ -308,11 +344,11 @@ nav ul {
   margin-bottom: 5px;
 }
 .project-container button:hover {
-  background: hsl(256deg, 69%, 45%);
-  color: hsl(0deg, 0%, 99%);
+  background: hsl(256, 69%, 45%);
+  color: hsl(0, 0%, 99%);
 }
 .project-container .more {
-  border: 2px solid hsl(256deg, 75%, 32%);
+  border: 2px solid hsl(256, 75%, 32%);
   font-weight: bold;
   border-radius: 0;
   align-self: center;
@@ -320,7 +356,7 @@ nav ul {
 }
 
 .contact-container {
-  background: hsl(256deg, 69%, 45%);
+  background: hsl(256, 69%, 45%);
   position: relative;
   padding-top: 5px;
 }
@@ -347,12 +383,12 @@ nav ul {
 }
 
 .curves .shape-fill {
-  fill: hsl(0deg, 0%, 99%);
+  fill: hsl(0, 0%, 99%);
 }
 
 .contacts {
   margin-top: 7.5em;
-  background: hsl(256deg, 69%, 45%);
+  background: hsl(256, 69%, 45%);
   color: white;
   display: flex;
   flex-direction: column;
@@ -381,7 +417,7 @@ nav ul {
 }
 .contacts form button {
   padding: 0.7em 0.4em;
-  background-color: hsl(130deg, 90%, 29%);
+  background-color: hsl(130, 90%, 29%);
   color: white;
   cursor: pointer;
   width: 200px;
@@ -390,7 +426,7 @@ nav ul {
   margin-inline: auto;
 }
 .contacts form button:hover {
-  background: hsl(125deg, 85%, 36%);
+  background: hsl(125, 85%, 36%);
   transition: 300ms ease-in-out;
 }
 .contacts .contact-links {
@@ -402,7 +438,7 @@ nav ul {
   color: white;
 }
 .contacts .contact-links i:hover {
-  color: hsl(240deg, 3%, 12%);
+  color: hsl(240, 3%, 12%);
   transition: 300ms ease-in-out;
 }
 .contacts .contact-links span {

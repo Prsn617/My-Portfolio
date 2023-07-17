@@ -4,14 +4,34 @@
 /*Colors*/
 /*Fonts*/
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   padding: 0;
   margin: 0;
-  font-family: var(--heading);
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 99%);
+  overflow-x: hidden;
+}
+
+.logo a {
+  color: #000;
+}
+
+header,
+.about-container,
+.hero,
+.project-container,
+.nav-title,
+.contacts,
+.more-projects {
+  padding-inline: 12vw 9.5vw;
 }
 
 a {
@@ -21,4 +41,98 @@ a {
 li {
   list-style: none;
 }
-/*# sourceMappingURL=global.css.map */
+
+.material-icons.hidden {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-purp,
+.btn-white {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 12px;
+  border: 1px solid hsl(256, 75%, 32%);
+  cursor: pointer;
+  transition: all 350ms ease-in-out;
+}
+.btn-purp:hover,
+.btn-white:hover {
+  transition: all 500ms ease-in-out;
+}
+
+.btn-purp {
+  background-color: hsl(256, 75%, 32%);
+  color: hsl(0, 0%, 99%);
+}
+.btn-purp:hover {
+  background-color: hsl(0, 0%, 99%);
+  color: hsl(256, 75%, 32%);
+}
+
+.btn-white {
+  background-color: hsl(0, 0%, 99%);
+  color: hsl(256, 75%, 32%);
+}
+.btn-white:hover {
+  background-color: hsl(256, 75%, 32%);
+  color: hsl(0, 0%, 99%);
+}
+
+.dark {
+  background: hsl(240, 3%, 12%);
+  color: hsl(138, 10%, 80%);
+}
+.dark nav a {
+  color: hsl(138, 10%, 80%);
+}
+.dark nav a:hover {
+  color: hsl(256, 55%, 75%);
+  border-bottom: 3px solid hsl(256, 55%, 75%);
+}
+.dark .logo a {
+  color: hsl(138, 10%, 80%);
+}
+.dark main h1 span {
+  color: hsl(256, 55%, 75%);
+}
+.dark main .b2 {
+  background: hsl(138, 10%, 80%);
+}
+.dark main span i {
+  color: hsl(256, 55%, 75%);
+}
+.dark main .project-1,
+.dark main .project-3 {
+  background: linear-gradient(90deg, hsl(240, 3%, 12%) 0%, hsl(256, 75%, 32%) 100%);
+}
+.dark main .project-2 {
+  background: linear-gradient(90deg, hsl(256, 75%, 32%) 0%, hsl(240, 3%, 12%) 100%);
+}
+.dark .proj-desc {
+  color: hsl(138, 10%, 80%);
+}
+.dark .proj-desc button {
+  background: hsl(256, 55%, 75%);
+  color: black;
+}
+.dark .proj-desc button:hover {
+  background-color: wheat;
+}
+.dark .curves .shape-fill {
+  fill: hsl(240, 3%, 12%);
+}
+.dark main .contact-container,
+.dark main .contacts {
+  background: hsl(256, 75%, 32%);
+}
+.dark .projects-demo {
+  background-color: hsl(240, 3%, 12%);
+  box-shadow: 4px 4px 5px 5px hsl(256, 75%, 32%);
+}
+.dark .about-project .title span {
+  background-color: #555;
+}/*# sourceMappingURL=global.css.map */

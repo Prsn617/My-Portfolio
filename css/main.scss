@@ -1,31 +1,72 @@
 @import "./global";
 
-.head {
+header {
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+
+  .logo {
+    flex: 2;
+  }
 }
 
-nav ul {
+.burger {
+  flex-direction: column;
+  gap: 7px;
+  display: none;
+  z-index: 3;
+  cursor: pointer;
+
+  div {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    transition: all 500ms ease-in-out;
+  }
+}
+.burger.active {
+  .b1 {
+    transform: translateY(12px) rotate(45deg);
+    transition: all 600ms ease-in-out;
+    background-color: rgb(221, 109, 109);
+  }
+  .b2 {
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+  }
+  .b3 {
+    transform: translateY(-12px) rotate(-45deg);
+    transition: all 600ms ease-in-out;
+    background-color: rgb(221, 109, 109);
+  }
+}
+
+.nav-bar {
+  flex: 3;
   display: flex;
-}
+  gap: 20px;
+  justify-content: space-between;
 
-.nav-list {
-  &:not(:last-child) {
-    margin-right: 4em;
+  ul {
+    display: flex;
+    gap: 50px;
+    align-items: center;
   }
 
-  a {
-    font-size: 1rem;
-    color: $gray;
-    position: relative;
+  li {
+    a {
+      font-size: 1rem;
+      color: $gray;
+      position: relative;
+      transition: all 350ms ease-in-out;
 
-    &:hover {
-      color: $purple;
-      padding-bottom: 10px;
-      border-bottom: 3px solid $purple;
-      transition: 250ms ease-in-out;
+      &:hover {
+        color: $purple;
+        padding-bottom: 10px;
+        border-bottom: 3px solid $purple;
+        transition: 250ms ease-in-out;
+      }
     }
   }
 }
@@ -307,7 +348,6 @@ nav ul {
 }
 
 footer {
-  // margin-top: 25px;
   background-color: rgb(48, 44, 44);
   text-align: center;
   padding: 0.375em 0;
