@@ -31,7 +31,16 @@ header,
 .nav-title,
 .contacts,
 .more-projects {
-  padding-inline: 12vw 9.5vw;
+  padding-inline: 15.5vw 14vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 1px;
 }
 
 a {

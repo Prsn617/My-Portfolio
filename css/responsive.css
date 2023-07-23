@@ -31,7 +31,16 @@ header,
 .nav-title,
 .contacts,
 .more-projects {
-  padding-inline: 12vw 9.5vw;
+  padding-inline: 15.5vw 14vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 1px;
 }
 
 a {
@@ -204,12 +213,12 @@ li {
     width: 300px;
     margin-left: 0;
   }
+  .nav-title {
+    text-align: center;
+    margin-top: 48px;
+  }
   .project-container {
     padding-inline: 0;
-  }
-  .project-container .proj {
-    top: 0;
-    left: calc(50% - 184px);
   }
   .project-container img {
     height: 275px;
@@ -218,21 +227,29 @@ li {
   .project-container .project-2,
   .project-container .project-3 {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: calc(-100vw + 1100px);
-    min-height: 470px;
-    left: 0;
+    min-height: 420px;
     border-radius: 0;
+    gap: 0;
   }
   .project-container .project-1 .proj-desc,
   .project-container .project-2 .proj-desc,
   .project-container .project-3 .proj-desc {
+    text-align: center;
     margin: 0;
-    margin-top: 142px;
     padding-inline: 42px;
     padding-bottom: 36px;
+  }
+  .project-container .project-1 .proj,
+  .project-container .project-2 .proj,
+  .project-container .project-3 .proj {
+    position: relative;
+    inset: 0;
+  }
+  .project-2 {
+    flex-direction: column-reverse !important;
   }
   .project-2 img,
   .project-3 img {

@@ -79,13 +79,13 @@
     }
   }
 
+  .nav-title {
+    text-align: center;
+    margin-top: 48px;
+  }
+
   .project-container {
     padding-inline: 0;
-
-    .proj {
-      top: 0;
-      left: calc(50% - 184px);
-    }
 
     img {
       height: 275px;
@@ -95,21 +95,30 @@
     .project-2,
     .project-3 {
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: center;
       justify-content: space-around;
-      height: calc((-1 * 100vw) + 1100px);
-      min-height: 470px;
-      left: 0;
+      // height: calc((-1 * 100vw) + 1100px);
+      min-height: 420px;
       border-radius: 0;
+      gap: 0;
 
       .proj-desc {
+        text-align: center;
         margin: 0;
-        margin-top: 142px;
         padding-inline: 42px;
         padding-bottom: 36px;
       }
+
+      .proj {
+        position: relative;
+        inset: 0;
+      }
     }
+  }
+
+  .project-2 {
+    flex-direction: column-reverse !important;
   }
 
   .project-2,
