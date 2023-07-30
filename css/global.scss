@@ -158,6 +158,10 @@ li {
   .projects-demo {
     background-color: $backD;
     box-shadow: 4px 4px 5px 5px $purple;
+
+    p {
+      color: #ccc;
+    }
   }
 
   .about-project .title span {

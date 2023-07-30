@@ -4,7 +4,16 @@ const body = document.getElementById("body");
 const burger = document.querySelector(".burger");
 const navbar = document.querySelector(".nav-bar");
 const navLists = document.querySelectorAll(".nav-list");
+const tagger = document.querySelectorAll(".tagger");
+
 let light = localStorage.getItem("theme");
+const vw = window.visualViewport.width;
+
+tagger.forEach((tag) => {
+  if (vw < 1120) {
+    tag.classList.remove("tags");
+  }
+});
 
 body.classList = light;
 if (light === "dark") {

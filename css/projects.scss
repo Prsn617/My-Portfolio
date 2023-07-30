@@ -11,15 +11,17 @@
 }
 
 .projects-demo {
-  height: auto;
+  flex: 1;
   width: 47%;
-  box-shadow: 4px 4px 5px 5px $purpleS;
+  box-shadow: 4px 4px 8px 4px $purpleS;
   background-color: white;
   display: flex;
   flex-direction: column;
+  border-radius: 12px;
+  position: relative;
 
   .about-project {
-    padding: 16px 30px;
+    padding: 14px 24px;
     display: flex;
     flex-direction: column;
   }
@@ -31,7 +33,13 @@
   }
 
   img {
-    width: 100%;
+    margin: 8px 24px 1px 24px;
+    border-radius: 7px;
+  }
+
+  p {
+    color: #333;
+    font-size: 15px;
   }
 }
 
@@ -44,4 +52,62 @@
   padding: 3px 5px;
   font-size: 0.7rem;
   border-radius: 5px;
+  margin: 1px;
+}
+
+.tagger {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.proj-game img {
+  height: 312px;
+}
+
+.tags {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: absolute;
+  top: 69px;
+  right: -10px;
+  transition: opacity 360ms ease-in-out;
+
+  button {
+    cursor: none;
+    position: relative;
+    border-radius: 0;
+    width: 150px;
+    box-shadow: -2px 2px 5px $purpleD;
+  }
+
+  button::before {
+    content: "";
+    position: absolute;
+    top: -11px;
+    right: -1px;
+    width: 10px;
+    height: 10px;
+    transform: scaleX(-1);
+    background: linear-gradient(
+      to bottom right,
+      transparent 0%,
+      transparent 50%,
+      $purpleD 50%,
+      $purpleD 100%
+    );
+  }
+}
+
+.projects-demo:hover {
+  .tags {
+    opacity: 1;
+    transition: opacity 600ms ease-in-out;
+
+    button {
+      cursor: pointer;
+    }
+  }
 }

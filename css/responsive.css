@@ -219,6 +219,7 @@ li {
   }
   .project-container {
     padding-inline: 0;
+    gap: 24px;
   }
   .project-container img {
     height: 275px;
@@ -230,7 +231,7 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    min-height: 420px;
+    min-height: 450px;
     border-radius: 0;
     gap: 0;
   }
@@ -263,6 +264,9 @@ li {
 @media only screen and (max-width: 675px) {
   .projects-demo {
     width: 100%;
+  }
+  .proj-game img {
+    height: auto;
   }
   .contacts form {
     gap: 5px;
