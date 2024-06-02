@@ -63,6 +63,23 @@ li {
   display: none;
 }
 
+.theme-toggle {
+  width: 50px;
+  height: 20px;
+  border: 2px solid $purpleD;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding-inline: 5px;
+  transition: all 250ms ease-in-out;
+}
+.theme-toggle div {
+  width: 14px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: $purpleD;
+}
+
 .btn-purp,
 .btn-white {
   font-size: 1rem;
@@ -109,6 +126,17 @@ li {
 
   .logo a {
     color: $nText;
+  }
+
+  .theme-toggle {
+    border: 2px solid $purpleS;
+    transition: all 250ms ease-in-out;
+  }
+  .theme-toggle div {
+    width: 16px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: $purpleS;
   }
 
   main h1 span {

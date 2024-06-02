@@ -1,5 +1,5 @@
-const t_on = document.getElementById("t1");
-const t_off = document.getElementById("t2");
+const themeToggle = document.querySelector(".theme-toggle");
+const themeBall = document.querySelector(".theme-toggle div");
 const body = document.getElementById("body");
 const burger = document.querySelector(".burger");
 const navbar = document.querySelector(".nav-bar");
@@ -17,25 +17,20 @@ tagger.forEach((tag) => {
 
 body.classList = light;
 if (light === "dark") {
-  t_off.classList.add("hidden");
-  t_on.classList.remove("hidden");
+  themeToggle.style.paddingLeft = "30px";
 }
+themeToggle.addEventListener("click", () => {
+  if (localStorage.getItem("theme") === "dark") {
+    localStorage.setItem("theme", "");
+    themeToggle.style.paddingLeft = "5px";
+  }
+  else {
+    localStorage.setItem("theme", "dark");
+    themeToggle.style.paddingLeft = "30px";
 
-t_on.addEventListener("click", () => {
-  localStorage.setItem("theme", "");
-  t_on.classList.add("hidden");
-  t_off.classList.remove("hidden");
+  }
   body.classList = localStorage.getItem("theme");
-  toggleNavBar();
-});
-
-t_off.addEventListener("click", () => {
-  localStorage.setItem("theme", "dark");
-  t_off.classList.add("hidden");
-  t_on.classList.remove("hidden");
-  body.classList = localStorage.getItem("theme");
-  toggleNavBar();
-});
+})
 
 navLists.forEach((lists) => {
   lists.addEventListener("click", () => {

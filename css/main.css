@@ -59,6 +59,24 @@ li {
   display: none;
 }
 
+.theme-toggle {
+  width: 50px;
+  height: 20px;
+  border: 2px solid hsl(256, 71%, 13%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding-inline: 5px;
+  transition: all 250ms ease-in-out;
+}
+
+.theme-toggle div {
+  width: 14px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: hsl(256, 71%, 13%);
+}
+
 .btn-purp,
 .btn-white {
   font-size: 1rem;
@@ -104,6 +122,16 @@ li {
 }
 .dark .logo a {
   color: hsl(138, 10%, 80%);
+}
+.dark .theme-toggle {
+  border: 2px solid hsl(256, 55%, 75%);
+  transition: all 250ms ease-in-out;
+}
+.dark .theme-toggle div {
+  width: 16px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: hsl(256, 55%, 75%);
 }
 .dark main h1 span {
   color: hsl(256, 55%, 75%);
@@ -217,23 +245,23 @@ header .logo {
   flex-direction: column;
 }
 
-.material-icons.t_on,
-.material-icons.t_off {
-  font-size: 48px;
+.theme-toggle,
+.theme-toggle {
   cursor: pointer;
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  margin-top: 10px;
 }
-.material-icons.t_on::after,
-.material-icons.t_off::after {
-  content: "Dark-Theme";
-  font-size: 0.9rem;
+.theme-toggle::after,
+.theme-toggle::after {
+  content: "Theme";
+  font-size: 0.85rem;
   font-family: "Roboto", sans-serif;
   position: absolute;
-  left: -50%;
-  top: 80%;
+  left: 10%;
+  top: 120%;
 }
 
 .hero {
