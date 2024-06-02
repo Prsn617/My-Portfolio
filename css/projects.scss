@@ -7,17 +7,18 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding-block: 48px;
-  gap: 40px;
+  row-gap: 40px;
+  column-gap: 28px;
 }
 
 .projects-demo {
   flex: 1;
-  width: 47%;
+  width: 30%;
   box-shadow: 4px 4px 8px 4px $purpleS;
   background-color: white;
   display: flex;
   flex-direction: column;
-  border-radius: 12px;
+  border-radius: 10px;
   position: relative;
 
   .about-project {
@@ -33,8 +34,9 @@
   }
 
   img {
-    margin: 8px 24px 1px 24px;
-    border-radius: 7px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 1px 1px 10px #aaa;
   }
 
   p {
