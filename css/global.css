@@ -186,9 +186,12 @@ li {
   background-color: var(--backD);
   box-shadow: 3px 3px 5px 4px var(--purple);
 }
+.dark .projects-demo:hover {
+  box-shadow: 5px 5px 12px 3px var(--purpleL);
+}
 .dark .projects-demo p {
   color: #ccc;
 }
 .dark .about-project .title span {
   background-color: #555;
-} /*# sourceMappingURL=global.css.map */
+}
