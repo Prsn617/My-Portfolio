@@ -1,181 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
-/*Colors*/
-/*Fonts*/
-* {
-  box-sizing: border-box;
-}
-
-html {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: hsl(0, 0%, 94%);
-  overflow-x: hidden;
-}
-
-.logo a {
-  color: #000;
-}
-
-header,
-.about-container,
-.hero,
-.project-container,
-.nav-title,
-.contacts,
-.more-projects {
-  padding-inline: 15.5vw 14vw;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  letter-spacing: 1px;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-.material-icons.hidden {
-  display: none;
-}
-
-.hidden {
-  display: none;
-}
-
-.theme-toggle {
-  width: 50px;
-  height: 20px;
-  border: 2px solid hsl(256, 71%, 13%);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  padding-inline: 5px;
-  transition: all 250ms ease-in-out;
-}
-
-.theme-toggle div {
-  width: 14px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: hsl(256, 71%, 13%);
-}
-
-.btn-purp,
-.btn-white {
-  font-size: 1rem;
-  padding: 0.5em 1em;
-  border-radius: 12px;
-  border: 1px solid hsl(256, 75%, 32%);
-  cursor: pointer;
-  transition: all 350ms ease-in-out;
-}
-.btn-purp:hover,
-.btn-white:hover {
-  transition: all 500ms ease-in-out;
-}
-
-.btn-purp {
-  background-color: hsl(256, 75%, 32%);
-  color: hsl(0, 0%, 94%);
-}
-.btn-purp:hover {
-  background-color: hsl(0, 0%, 94%);
-  color: hsl(256, 75%, 32%);
-}
-
-.btn-white {
-  background-color: hsl(0, 0%, 94%);
-  color: hsl(256, 75%, 32%);
-}
-.btn-white:hover {
-  background-color: hsl(256, 75%, 32%);
-  color: hsl(0, 0%, 94%);
-}
-
-.dark {
-  background: hsl(240, 3%, 12%);
-  color: hsl(138, 10%, 80%);
-}
-.dark nav a {
-  color: hsl(138, 10%, 80%);
-}
-.dark nav a:hover {
-  color: hsl(256, 55%, 75%);
-  border-bottom: 3px solid hsl(256, 55%, 75%);
-}
-.dark .logo a {
-  color: hsl(138, 10%, 80%);
-}
-.dark .theme-toggle {
-  border: 2px solid hsl(256, 55%, 75%);
-  transition: all 250ms ease-in-out;
-}
-.dark .theme-toggle div {
-  width: 16px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: hsl(256, 55%, 75%);
-}
-.dark main h1 span {
-  color: hsl(256, 55%, 75%);
-}
-.dark main .b2 {
-  background: hsl(138, 10%, 80%);
-}
-.dark main span i {
-  color: hsl(256, 55%, 75%);
-}
-.dark main .project-1,
-.dark main .project-3 {
-  background: linear-gradient(90deg, hsl(240, 3%, 12%) 0%, hsl(256, 75%, 32%) 100%);
-}
-.dark main .project-2 {
-  background: linear-gradient(90deg, hsl(256, 75%, 32%) 0%, hsl(240, 3%, 12%) 100%);
-}
-.dark .proj-desc {
-  color: hsl(138, 10%, 80%);
-}
-.dark .proj-desc button {
-  background: hsl(256, 55%, 75%);
-  color: black;
-}
-.dark .proj-desc button:hover {
-  background-color: wheat;
-}
-.dark .curves .shape-fill {
-  fill: hsl(240, 3%, 12%);
-}
-.dark main .contact-container,
-.dark main .contacts {
-  background: hsl(256, 75%, 32%);
-}
-.dark .projects-demo {
-  background-color: hsl(240, 3%, 12%);
-  box-shadow: 4px 4px 5px 5px hsl(256, 75%, 32%);
-}
-.dark .projects-demo p {
-  color: #ccc;
-}
-.dark .about-project .title span {
-  background-color: #555;
-}
+@import "./global.css";
 
 header {
   height: 80px;
@@ -204,7 +27,7 @@ header .logo {
 .burger.active .b1 {
   transform: translateY(12px) rotate(45deg);
   transition: all 600ms ease-in-out;
-  background-color: rgb(221, 109, 109);
+  background-color: var(--pink);
 }
 .burger.active .b2 {
   opacity: 0;
@@ -213,7 +36,7 @@ header .logo {
 .burger.active .b3 {
   transform: translateY(-12px) rotate(-45deg);
   transition: all 600ms ease-in-out;
-  background-color: rgb(221, 109, 109);
+  background-color: var(--pink);
 }
 
 .nav-bar {
@@ -229,34 +52,26 @@ header .logo {
 }
 .nav-bar li a {
   font-size: 1rem;
-  color: hsl(0, 7%, 32%);
+  color: var(--gray);
   position: relative;
-  transition: padding 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  padding-bottom: 0;
+  border-bottom: 0px solid var(--gray);
 }
 .nav-bar li a:hover {
-  color: hsl(256, 75%, 32%);
+  color: var(--purple);
   padding-bottom: 10px;
-  border-bottom: 3px solid hsl(256, 75%, 32%);
-  transition: padding 250ms ease-in-out;
+  border-bottom: 3px solid var(--purple);
+  transition: all 250ms ease-in-out;
 }
 
-.theme {
-  display: flex;
-  flex-direction: column;
-}
-
-.theme-toggle,
 .theme-toggle {
   cursor: pointer;
   position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  margin-top: 10px;
 }
-.theme-toggle::after,
 .theme-toggle::after {
   content: "Theme";
+  color: var(--gray);
   font-size: 0.85rem;
   font-family: "Roboto", sans-serif;
   position: absolute;
@@ -276,33 +91,18 @@ header .logo {
   font-family: "Russo One", sans-serif;
 }
 .hero-desc h1 span {
-  color: hsl(256, 75%, 32%);
+  color: var(--purple);
 }
 .hero-desc p {
   margin-top: -1.5em;
   margin-bottom: 1.5em;
+  max-width: 56ch;
 }
 .hero-desc button {
   margin-bottom: 8px;
   margin-right: 7px;
 }
-.hero-desc button a {
-  color: white;
-}
-.hero-desc button:hover {
-  background: hsl(256, 69%, 45%);
-  transition: all 600ms ease-in-out;
-}
-.hero-desc button:hover a {
-  color: white;
-  transition: all 600ms ease-in-out;
-}
-.hero-desc .b1 {
-  background: hsl(256, 75%, 32%);
-}
-.hero-desc .b2 a {
-  color: hsl(256, 75%, 32%);
-}
+
 .hero-img {
   margin-top: 5em;
   width: 750px;
@@ -323,7 +123,7 @@ header .logo {
 .project-container .project-2,
 .project-container .project-3 {
   position: relative;
-  background: linear-gradient(90deg, hsl(256, 55%, 75%) 0%, hsl(0, 0%, 94%) 100%);
+  background: linear-gradient(90deg, var(--purpleS) 0%, var(--back) 100%);
   height: 250px;
   margin-bottom: 6em;
   border-radius: 5px;
@@ -358,7 +158,7 @@ header .logo {
   left: -30px;
 }
 .project-container .project-2 {
-  background: linear-gradient(90deg, hsl(0, 0%, 94%) 0%, hsl(256, 55%, 75%) 100%);
+  background: linear-gradient(90deg, var(--back) 0%, var(--purpleS) 100%);
 }
 .project-container .project-2 .proj {
   height: 290px;
@@ -388,11 +188,11 @@ header .logo {
   margin-bottom: 5px;
 }
 .project-container button:hover {
-  background: hsl(256, 69%, 45%);
-  color: hsl(0, 0%, 94%);
+  background: var(--purple);
+  color: var(--back);
 }
 .project-container .more {
-  border: 2px solid hsl(256, 75%, 32%);
+  border: 2px solid var(--purple);
   font-weight: bold;
   border-radius: 0;
   align-self: center;
@@ -400,7 +200,7 @@ header .logo {
 }
 
 .contact-container {
-  background: hsl(256, 69%, 45%);
+  background: var(--purple);
   position: relative;
   padding-top: 5px;
 }
@@ -427,72 +227,83 @@ header .logo {
 }
 
 .curves .shape-fill {
-  fill: hsl(0, 0%, 94%);
+  fill: var(--back);
 }
 
 .contacts {
-  margin-top: 7.5em;
-  background: hsl(256, 69%, 45%);
-  color: white;
+  margin-top: 4.8em;
+  background: var(--purple);
+  color: var(--nText);
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 64px;
   padding-block: 48px;
+}
+.contacts h1 {
+  font-size: 38px;
+  margin-block: 0;
+}
+.contacts p {
+  max-width: 48ch;
+}
+.contacts .contact-desc {
+  flex: 4;
+}
+.contacts .form {
+  flex: 3;
 }
 .contacts form {
   display: grid;
-  grid-template-columns: auto auto;
+  flex-direction: column;
   gap: 25px;
 }
-.contacts form textarea,
-.contacts form button {
-  grid-column: 1/3;
-}
+
 .contacts form input,
 .contacts form textarea,
 .contacts form button {
-  border: 0;
+  border: 1px solid var(--purpleS);
   padding: 0.7em 0.4em;
   padding-left: 20px;
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
   width: 100%;
-  background-color: rgb(212, 206, 206);
+  background-color: var(--nText);
+  color: var(--back);
 }
 .contacts form button {
   padding: 0.7em 0.4em;
-  background-color: hsl(130, 90%, 29%);
+  background-color: var(--red);
+  border: 0;
   color: white;
   cursor: pointer;
-  width: 200px;
-  border-radius: 15px;
-  margin-top: 10px;
-  margin-inline: auto;
-}
-.contacts form button:hover {
-  background: hsl(125, 85%, 36%);
+  border-radius: 10px;
   transition: 300ms ease-in-out;
 }
+.contacts form button:hover {
+  background: var(--purpleL);
+  transition: 400ms ease-in-out;
+}
 .contacts .contact-links {
+  width: 45ch;
+  margin-top: 1.9em;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 12px;
+  justify-content: space-between;
 }
 .contacts .contact-links i {
   color: white;
 }
 .contacts .contact-links i:hover {
-  color: hsl(240, 3%, 12%);
+  color: var(--backD);
   transition: 300ms ease-in-out;
 }
 .contacts .contact-links span {
+  font-size: 13px;
   display: flex;
+  max-width: 60px;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
-  padding: 1.5em 1em;
-  margin-bottom: 15px;
+  text-align: center;
+  padding-bottom: 1.5em;
 }
 
 footer {
@@ -500,4 +311,4 @@ footer {
   text-align: center;
   padding: 0.375em 0;
   color: white;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

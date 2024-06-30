@@ -1,181 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
-/*Colors*/
-/*Fonts*/
-* {
-  box-sizing: border-box;
-}
-
-html {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: hsl(0, 0%, 94%);
-  overflow-x: hidden;
-}
-
-.logo a {
-  color: #000;
-}
-
-header,
-.about-container,
-.hero,
-.project-container,
-.nav-title,
-.contacts,
-.more-projects {
-  padding-inline: 15.5vw 14vw;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  letter-spacing: 1px;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-.material-icons.hidden {
-  display: none;
-}
-
-.hidden {
-  display: none;
-}
-
-.theme-toggle {
-  width: 50px;
-  height: 20px;
-  border: 2px solid hsl(256, 71%, 13%);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  padding-inline: 5px;
-  transition: all 250ms ease-in-out;
-}
-
-.theme-toggle div {
-  width: 14px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: hsl(256, 71%, 13%);
-}
-
-.btn-purp,
-.btn-white {
-  font-size: 1rem;
-  padding: 0.5em 1em;
-  border-radius: 12px;
-  border: 1px solid hsl(256, 75%, 32%);
-  cursor: pointer;
-  transition: all 350ms ease-in-out;
-}
-.btn-purp:hover,
-.btn-white:hover {
-  transition: all 500ms ease-in-out;
-}
-
-.btn-purp {
-  background-color: hsl(256, 75%, 32%);
-  color: hsl(0, 0%, 94%);
-}
-.btn-purp:hover {
-  background-color: hsl(0, 0%, 94%);
-  color: hsl(256, 75%, 32%);
-}
-
-.btn-white {
-  background-color: hsl(0, 0%, 94%);
-  color: hsl(256, 75%, 32%);
-}
-.btn-white:hover {
-  background-color: hsl(256, 75%, 32%);
-  color: hsl(0, 0%, 94%);
-}
-
-.dark {
-  background: hsl(240, 3%, 12%);
-  color: hsl(138, 10%, 80%);
-}
-.dark nav a {
-  color: hsl(138, 10%, 80%);
-}
-.dark nav a:hover {
-  color: hsl(256, 55%, 75%);
-  border-bottom: 3px solid hsl(256, 55%, 75%);
-}
-.dark .logo a {
-  color: hsl(138, 10%, 80%);
-}
-.dark .theme-toggle {
-  border: 2px solid hsl(256, 55%, 75%);
-  transition: all 250ms ease-in-out;
-}
-.dark .theme-toggle div {
-  width: 16px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: hsl(256, 55%, 75%);
-}
-.dark main h1 span {
-  color: hsl(256, 55%, 75%);
-}
-.dark main .b2 {
-  background: hsl(138, 10%, 80%);
-}
-.dark main span i {
-  color: hsl(256, 55%, 75%);
-}
-.dark main .project-1,
-.dark main .project-3 {
-  background: linear-gradient(90deg, hsl(240, 3%, 12%) 0%, hsl(256, 75%, 32%) 100%);
-}
-.dark main .project-2 {
-  background: linear-gradient(90deg, hsl(256, 75%, 32%) 0%, hsl(240, 3%, 12%) 100%);
-}
-.dark .proj-desc {
-  color: hsl(138, 10%, 80%);
-}
-.dark .proj-desc button {
-  background: hsl(256, 55%, 75%);
-  color: black;
-}
-.dark .proj-desc button:hover {
-  background-color: wheat;
-}
-.dark .curves .shape-fill {
-  fill: hsl(240, 3%, 12%);
-}
-.dark main .contact-container,
-.dark main .contacts {
-  background: hsl(256, 75%, 32%);
-}
-.dark .projects-demo {
-  background-color: hsl(240, 3%, 12%);
-  box-shadow: 4px 4px 5px 5px hsl(256, 75%, 32%);
-}
-.dark .projects-demo p {
-  color: #ccc;
-}
-.dark .about-project .title span {
-  background-color: #555;
-}
+@import "./global.css";
 
 .more-projects {
   margin-top: 24px;
@@ -184,23 +7,26 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   padding-block: 48px;
-  row-gap: 40px;
-  -moz-column-gap: 28px;
-       column-gap: 28px;
+  row-gap: 60px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
 }
 
 .projects-demo {
   flex: 1;
   width: 30%;
-  box-shadow: 4px 4px 8px 4px hsl(256, 55%, 75%);
+  box-shadow: 3px 3px 6px 4px var(--purpleS);
   background-color: white;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   position: relative;
 }
+.projects-demo:hover {
+  box-shadow: 5px 5px 12px 3px var(--purpleL);
+}
 .projects-demo .about-project {
-  padding: 14px 24px;
+  padding: 14px 24px 6px 24px;
   display: flex;
   flex-direction: column;
 }
@@ -266,7 +92,13 @@ li {
   width: 10px;
   height: 10px;
   transform: scaleX(-1);
-  background: linear-gradient(to bottom right, transparent 0%, transparent 50%, hsl(256, 71%, 13%) 50%, hsl(256, 71%, 13%) 100%);
+  background: linear-gradient(
+    to bottom right,
+    transparent 0%,
+    transparent 50%,
+    hsl(256, 71%, 13%) 50%,
+    hsl(256, 71%, 13%) 100%
+  );
 }
 
 .projects-demo:hover .tags {
@@ -275,4 +107,4 @@ li {
 }
 .projects-demo:hover .tags button {
   cursor: pointer;
-}/*# sourceMappingURL=projects.css.map */
+} /*# sourceMappingURL=projects.css.map */

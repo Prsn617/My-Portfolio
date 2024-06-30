@@ -23,14 +23,12 @@ themeToggle.addEventListener("click", () => {
   if (localStorage.getItem("theme") === "dark") {
     localStorage.setItem("theme", "");
     themeToggle.style.paddingLeft = "5px";
-  }
-  else {
+  } else {
     localStorage.setItem("theme", "dark");
     themeToggle.style.paddingLeft = "30px";
-
   }
   body.classList = localStorage.getItem("theme");
-})
+});
 
 navLists.forEach((lists) => {
   lists.addEventListener("click", () => {

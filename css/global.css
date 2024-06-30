@@ -1,8 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
-/*Colors*/
-/*Fonts*/
+
+:root {
+  --red: hsl(308, 72%, 28%);
+  --purple: hsl(256, 75%, 32%);
+  --purpleL: hsl(256, 69%, 45%);
+  --purpleD: hsl(256, 71%, 13%);
+  --purpleS: hsl(256, 55%, 75%);
+  --pink: hsl(348, 100%, 70%);
+  --skyBlue: hsl(200, 85%, 52%);
+  --back: hsl(0, 0%, 94%);
+  --gray: hsl(0, 7%, 30%);
+  --backD: hsl(240, 3%, 12%);
+  --nText: hsl(138, 10%, 80%);
+
+  --bigFont: "Russo One", sans-serif;
+  --heading: "Poppins", sans-serif;
+  --desc: "Roboto", sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -15,8 +32,8 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: hsl(0, 0%, 94%);
+  font-family: var(--heading);
+  background-color: var(--back);
   overflow-x: hidden;
 }
 
@@ -51,10 +68,6 @@ li {
   list-style: none;
 }
 
-.material-icons.hidden {
-  display: none;
-}
-
 .hidden {
   display: none;
 }
@@ -62,27 +75,26 @@ li {
 .theme-toggle {
   width: 50px;
   height: 20px;
-  border: 2px solid hsl(256, 71%, 13%);
+  border: 2px solid var(--gray);
   border-radius: 20px;
   display: flex;
   align-items: center;
   padding-inline: 5px;
   transition: all 250ms ease-in-out;
 }
-
 .theme-toggle div {
-  width: 14px;
+  width: 13px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background-color: hsl(256, 71%, 13%);
+  background-color: var(--gray);
 }
 
 .btn-purp,
 .btn-white {
   font-size: 1rem;
   padding: 0.5em 1em;
-  border-radius: 12px;
-  border: 1px solid hsl(256, 75%, 32%);
+  border-radius: 8px;
+  border: 1px solid var(--purple);
   cursor: pointer;
   transition: all 350ms ease-in-out;
 }
@@ -92,87 +104,91 @@ li {
 }
 
 .btn-purp {
-  background-color: hsl(256, 75%, 32%);
-  color: hsl(0, 0%, 94%);
+  background-color: var(--purple);
+  color: var(--back);
 }
 .btn-purp:hover {
-  background-color: hsl(0, 0%, 94%);
-  color: hsl(256, 75%, 32%);
+  background-color: var(--purpleS);
+  border-color: var(--purpleS);
+  color: var(--purpleD);
 }
 
 .btn-white {
-  background-color: hsl(0, 0%, 94%);
-  color: hsl(256, 75%, 32%);
+  background-color: var(--back);
+  color: var(--purple);
 }
 .btn-white:hover {
-  background-color: hsl(256, 75%, 32%);
-  color: hsl(0, 0%, 94%);
+  background-color: var(--purple);
+  color: var(--back);
 }
 
 .dark {
-  background: hsl(240, 3%, 12%);
-  color: hsl(138, 10%, 80%);
+  background: var(--backD);
+  color: var(--nText);
 }
-.dark nav a {
-  color: hsl(138, 10%, 80%);
+.dark .nav-bar li a {
+  color: var(--nText);
 }
-.dark nav a:hover {
-  color: hsl(256, 55%, 75%);
-  border-bottom: 3px solid hsl(256, 55%, 75%);
+.dark .nav-bar li a:hover {
+  color: var(--purpleS);
+  border-bottom: 3px solid var(--purpleS);
 }
 .dark .logo a {
-  color: hsl(138, 10%, 80%);
+  color: var(--nText);
 }
 .dark .theme-toggle {
-  border: 2px solid hsl(256, 55%, 75%);
+  border: 2px solid var(--purpleS);
   transition: all 250ms ease-in-out;
 }
 .dark .theme-toggle div {
   width: 16px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background-color: hsl(256, 55%, 75%);
+  background-color: var(--purpleS);
+}
+.dark .theme-toggle::after {
+  color: var(--back);
 }
 .dark main h1 span {
-  color: hsl(256, 55%, 75%);
+  color: var(--purpleS);
 }
 .dark main .b2 {
-  background: hsl(138, 10%, 80%);
+  background: var(--nText);
 }
 .dark main span i {
-  color: hsl(256, 55%, 75%);
+  color: var(--purpleS);
 }
 .dark main .project-1,
 .dark main .project-3 {
-  background: linear-gradient(90deg, hsl(240, 3%, 12%) 0%, hsl(256, 75%, 32%) 100%);
+  background: linear-gradient(90deg, var(--purple) 0%, var(--backD) 100%);
 }
 .dark main .project-2 {
-  background: linear-gradient(90deg, hsl(256, 75%, 32%) 0%, hsl(240, 3%, 12%) 100%);
+  background: linear-gradient(90deg, var(--backD) 0%, var(--purple) 100%);
 }
 .dark .proj-desc {
-  color: hsl(138, 10%, 80%);
+  color: var(--nText);
 }
 .dark .proj-desc button {
-  background: hsl(256, 55%, 75%);
+  background: var(--purpleS);
   color: black;
 }
 .dark .proj-desc button:hover {
   background-color: wheat;
 }
 .dark .curves .shape-fill {
-  fill: hsl(240, 3%, 12%);
+  fill: var(--backD);
 }
 .dark main .contact-container,
 .dark main .contacts {
-  background: hsl(256, 75%, 32%);
+  background: var(--purple);
 }
 .dark .projects-demo {
-  background-color: hsl(240, 3%, 12%);
-  box-shadow: 4px 4px 5px 5px hsl(256, 75%, 32%);
+  background-color: var(--backD);
+  box-shadow: 3px 3px 5px 4px var(--purple);
 }
 .dark .projects-demo p {
   color: #ccc;
 }
 .dark .about-project .title span {
   background-color: #555;
-}/*# sourceMappingURL=global.css.map */
+} /*# sourceMappingURL=global.css.map */

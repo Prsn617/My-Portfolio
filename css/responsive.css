@@ -1,181 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
-/*Colors*/
-/*Fonts*/
-* {
-  box-sizing: border-box;
-}
-
-html {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: hsl(0, 0%, 94%);
-  overflow-x: hidden;
-}
-
-.logo a {
-  color: #000;
-}
-
-header,
-.about-container,
-.hero,
-.project-container,
-.nav-title,
-.contacts,
-.more-projects {
-  padding-inline: 15.5vw 14vw;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  letter-spacing: 1px;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-.material-icons.hidden {
-  display: none;
-}
-
-.hidden {
-  display: none;
-}
-
-.theme-toggle {
-  width: 50px;
-  height: 20px;
-  border: 2px solid hsl(256, 71%, 13%);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  padding-inline: 5px;
-  transition: all 250ms ease-in-out;
-}
-
-.theme-toggle div {
-  width: 14px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: hsl(256, 71%, 13%);
-}
-
-.btn-purp,
-.btn-white {
-  font-size: 1rem;
-  padding: 0.5em 1em;
-  border-radius: 12px;
-  border: 1px solid hsl(256, 75%, 32%);
-  cursor: pointer;
-  transition: all 350ms ease-in-out;
-}
-.btn-purp:hover,
-.btn-white:hover {
-  transition: all 500ms ease-in-out;
-}
-
-.btn-purp {
-  background-color: hsl(256, 75%, 32%);
-  color: hsl(0, 0%, 94%);
-}
-.btn-purp:hover {
-  background-color: hsl(0, 0%, 94%);
-  color: hsl(256, 75%, 32%);
-}
-
-.btn-white {
-  background-color: hsl(0, 0%, 94%);
-  color: hsl(256, 75%, 32%);
-}
-.btn-white:hover {
-  background-color: hsl(256, 75%, 32%);
-  color: hsl(0, 0%, 94%);
-}
-
-.dark {
-  background: hsl(240, 3%, 12%);
-  color: hsl(138, 10%, 80%);
-}
-.dark nav a {
-  color: hsl(138, 10%, 80%);
-}
-.dark nav a:hover {
-  color: hsl(256, 55%, 75%);
-  border-bottom: 3px solid hsl(256, 55%, 75%);
-}
-.dark .logo a {
-  color: hsl(138, 10%, 80%);
-}
-.dark .theme-toggle {
-  border: 2px solid hsl(256, 55%, 75%);
-  transition: all 250ms ease-in-out;
-}
-.dark .theme-toggle div {
-  width: 16px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: hsl(256, 55%, 75%);
-}
-.dark main h1 span {
-  color: hsl(256, 55%, 75%);
-}
-.dark main .b2 {
-  background: hsl(138, 10%, 80%);
-}
-.dark main span i {
-  color: hsl(256, 55%, 75%);
-}
-.dark main .project-1,
-.dark main .project-3 {
-  background: linear-gradient(90deg, hsl(240, 3%, 12%) 0%, hsl(256, 75%, 32%) 100%);
-}
-.dark main .project-2 {
-  background: linear-gradient(90deg, hsl(256, 75%, 32%) 0%, hsl(240, 3%, 12%) 100%);
-}
-.dark .proj-desc {
-  color: hsl(138, 10%, 80%);
-}
-.dark .proj-desc button {
-  background: hsl(256, 55%, 75%);
-  color: black;
-}
-.dark .proj-desc button:hover {
-  background-color: wheat;
-}
-.dark .curves .shape-fill {
-  fill: hsl(240, 3%, 12%);
-}
-.dark main .contact-container,
-.dark main .contacts {
-  background: hsl(256, 75%, 32%);
-}
-.dark .projects-demo {
-  background-color: hsl(240, 3%, 12%);
-  box-shadow: 4px 4px 5px 5px hsl(256, 75%, 32%);
-}
-.dark .projects-demo p {
-  color: #ccc;
-}
-.dark .about-project .title span {
-  background-color: #555;
-}
+@import "./global.css";
 
 @media only screen and (max-width: 1120px) {
   nav ul,
@@ -218,24 +41,18 @@ li {
     transform: translateX(0px);
     transition: all 600ms ease-in-out;
   }
-  .theme {
-    display: flex;
-    margin-bottom: 30px;
-    margin-left: 78px;
-    align-items: start;
-    justify-content: center;
+  .theme-toggle {
+    border: 1px solid var(--back);
   }
-  .material-icons.t_on,
-  .material-icons.t_off {
+  .theme-toggle div {
+    background-color: var(--back);
+  }
+  .theme-toggle::after {
     color: white;
   }
-  .material-icons.t_on::after,
-  .material-icons.t_off::after {
-    left: 0;
-    top: 88%;
-  }
+
   .hero {
-    margin-top: 3em;
+    margin-top: 1.6em;
     flex-direction: column;
     height: auto;
     justify-content: center;
@@ -246,14 +63,10 @@ li {
   }
   .nav-title {
     text-align: center;
-    margin-top: 48px;
+    margin-top: 56px;
   }
   .project-container {
     padding-inline: 0;
-    gap: 24px;
-  }
-  .project-container img {
-    height: 275px;
   }
   .project-container .project-1,
   .project-container .project-2,
@@ -266,30 +79,43 @@ li {
     border-radius: 0;
     gap: 0;
   }
+
+  .project-2 img {
+    height: 200px;
+  }
+  .project-3 img,
+  .project-1 img {
+    height: 220px;
+  }
   .project-container .project-1 .proj-desc,
   .project-container .project-2 .proj-desc,
   .project-container .project-3 .proj-desc {
     text-align: center;
     margin: 0;
-    padding-inline: 42px;
+    padding-inline: 10px;
     padding-bottom: 36px;
   }
+  .project-container .project-1 .proj-desc,
+  .project-container .project-3 .proj-desc {
+    margin-top: -42px;
+  }
+
   .project-container .project-1 .proj,
   .project-container .project-2 .proj,
   .project-container .project-3 .proj {
     position: relative;
     inset: 0;
   }
+  .project-container .project-1 .proj,
+  .project-container .project-3 .proj {
+    top: -50px;
+  }
   .project-2 {
     flex-direction: column-reverse !important;
   }
-  .project-2 img,
-  .project-3 img {
-    height: 232px;
-  }
-  .contacts .contact-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+  .contacts {
+    flex-direction: column;
   }
 }
 @media only screen and (max-width: 675px) {
@@ -306,11 +132,21 @@ li {
     margin-bottom: 16px;
   }
   .contacts .contact-links {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    align-items: self-start;
+    grid-template-columns: repeat(2, 1fr);
   }
   .contacts .contact-links span {
-    margin: 0;
-    padding: 1em 0.5em;
+    width: auto;
   }
-}/*# sourceMappingURL=responsive.css.map */
+}
+
+@media only screen and (max-width: 450px) {
+  .contacts .contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
